@@ -1,0 +1,28 @@
+import time
+
+#SYNCHRONOUS
+
+def sync_f():
+    print('one', end='')
+    time.sleep(1)
+    print('two', end='')
+
+    #ASYNCHRONOUS
+    async def async_f():
+        print('one', end='')
+        await asyncio.sleep(1)
+        print('two', end='')
+
+
+# async def f():
+#     pass
+#
+# asyncio def g():
+#     await f() #pause here and come back to g() when f() is ready
+
+async def main():
+    # tasks = [async_f(), async_f(), asyncio]
+task = [async-f() for _ in range(3)]
+
+    await asyncio.gather(*tasks)
+asyncio.run(main())
